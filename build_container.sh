@@ -10,7 +10,7 @@ then
     --build-arg HTTPS_PROXY=http://buildproxy.nibdom.com.au:3128 \
     --build-arg http_proxy=http://buildproxy.nibdom.com.au:3128 \
     --build-arg https_proxy=http://buildproxy.nibdom.com.au:3128 \
-    -t docker-vim /vagrant
+    --rm -t docker-vim /vagrant
 else
   docker build --rm -t docker-vim /vagrant
 fi
