@@ -45,6 +45,7 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/elixir-lang/vim-elixir && \
   git clone https://github.com/moll/vim-node && \
   git clone https://github.com/airblade/vim-gitgutter && \
+  git clone https://github.com/mhinz/vim-startify && \
 # Color schemes
   git clone https://github.com/sjl/badwolf.git && \
   git clone https://github.com/nanotech/jellybeans.vim.git
