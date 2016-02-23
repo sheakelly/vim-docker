@@ -22,26 +22,18 @@ USER dev
 
 # setup pathogen vim plugin manager
 RUN mkdir -p $HOME/.vim/autoload $HOME/.vim/bundle && \
-    wget -P $HOME/.vim/autoload https://tpo.pe/pathogen.vim && \
-    echo "execute pathogen#infect()" >> $HOME/.vimrc && \
-    echo "syntax on" >> $HOME/.vimrc && \
-    echo "set nocp" >> $HOME/.vimrc && \
-    echo "filetype plugin indent on" >> $HOME/.vimrc && \
-# Powerline fonts
-    mkdir -p $HOME/.fonts $HOME/.config/fontconfig/conf.d && \
-    wget -P $HOME/.fonts https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf && \
-    wget -P $HOME/.config/fontconfig/conf.d/ https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf && \
-    fc-cache -vf $HOME/.fonts/ && \
-    echo "set guifont=Droid\\ Sans\\ Mono\\ 10"
+    wget -P $HOME/.vim/autoload https://tpo.pe/pathogen.vim
+
+COPY vimrc $HOME/.vimrc
 
 RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim && \
-  # Install vim plugins
+# Install vim plugins
   cd ~/.vim/bundle && \
   git clone git://github.com/tpope/vim-sensible.git && \
-  git clone https://github.com/flazz/vim-colorschemes.git && \
   git clone https://github.com/scrooloose/nerdtree.git && \
-  git clone https://github.com/bling/vim-airline && \
+  git clone https://github.com/vim-airline/vim-airline.git && \
+  git clone https://github.com/vim-airline/vim-airline-themes.git && \
   git clone https://github.com/kien/ctrlp.vim && \
   git clone https://github.com/scrooloose/syntastic && \
   git clone https://github.com/tpope/vim-fugitive && \
@@ -52,9 +44,9 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/elzr/vim-json && \
   git clone https://github.com/elixir-lang/vim-elixir && \
   git clone https://github.com/moll/vim-node && \
-  git clone https://github.com/airblade/vim-gitgutter
-
-COPY vimrc_append $HOME/vimrc_append
-RUN cat $HOME/vimrc_append >> $HOME/.vimrc
+  git clone https://github.com/airblade/vim-gitgutter && \
+# Color schemes
+  git clone https://github.com/sjl/badwolf.git && \
+  git clone https://github.com/nanotech/jellybeans.vim.git
 
 CMD vim
