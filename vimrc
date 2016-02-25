@@ -51,8 +51,8 @@ map <left> <nop>
 map <right> <nop>
 
 " NERDTree
-map <silent> <Leader>nt :NERDTreeToggle<CR>
-map <silent> <Leader>nr :NERDTree<CR>
-map <silent> <Leader>nf :NERDTreeFind<CR>
+map <silent> <leader>nt :NERDTreeToggle<CR>
+map <silent> <leader>nr :NERDTree<CR>
+map <silent> <leader>nf :NERDTreeFind<CR>
 
 color badwolf
