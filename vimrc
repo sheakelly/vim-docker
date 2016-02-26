@@ -56,3 +56,10 @@ map <silent> <leader>nr :NERDTree<CR>
 map <silent> <leader>nf :NERDTreeFind<CR>
 
 color badwolf
+
+" Tagbar is awesome...use it always
+map <leader>t :TagbarToggle<cr>
+" Tern JS
+let g:tern_show_argument_hints = 'on_move'
+# Auto save
+let g:auto_save = 1

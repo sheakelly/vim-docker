@@ -36,6 +36,7 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/vim-airline/vim-airline-themes.git && \
   git clone https://github.com/kien/ctrlp.vim && \
   git clone https://github.com/scrooloose/syntastic && \
+  git clone https://github.com/ternjs/tern_for_vim && \
   git clone https://github.com/tpope/vim-fugitive && \
   git clone https://github.com/tpope/vim-surround && \
   git clone https://github.com/pangloss/vim-javascript && \
@@ -45,7 +46,11 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/elixir-lang/vim-elixir && \
   git clone https://github.com/moll/vim-node && \
   git clone https://github.com/airblade/vim-gitgutter && \
-  git clone https://github.com/mhinz/vim-startify && \
+  git clone https://github.com/sirver/ultisnips.git && \
+  git clone https://github.com/honza/vim-snippets.git && \
+  git clone https://github.com/majutsushi/tagbar && \
+  git clone https://github.com/ekalinin/Dockerfile.vim && \
+  git clone https://github.com/vim-scripts/vim-auto-save && \
 # Color schemes
   git clone https://github.com/sjl/badwolf.git && \
   git clone https://github.com/nanotech/jellybeans.vim.git
