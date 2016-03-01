@@ -4,7 +4,7 @@ FROM ubuntu:latest
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
-    apt-get install -y vim git wget fontconfig curl
+    apt-get install -y vim git wget fontconfig curl exuberant-ctags  
 
 RUN useradd dev && \
     echo "ALL            ALL = (ALL) NOPASSWD: ALL" >> /etc/sudoers && \
@@ -49,6 +49,7 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/sirver/ultisnips.git && \
   git clone https://github.com/honza/vim-snippets.git && \
   git clone https://github.com/majutsushi/tagbar && \
+  git clone https://github.com/xolox/vim-easytags && \
   git clone https://github.com/ekalinin/Dockerfile.vim && \
   git clone https://github.com/vim-scripts/vim-auto-save && \
 # Color schemes

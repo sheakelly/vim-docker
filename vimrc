@@ -7,7 +7,7 @@ set number        "enable line numbers
 set t_Co=256      "enable 256 colors
 set hidden
 set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
+set tabstop=2     " a tab is four spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
@@ -59,7 +59,10 @@ color badwolf
 
 " Tagbar is awesome...use it always
 map <leader>t :TagbarToggle<cr>
+
 " Tern JS
 let g:tern_show_argument_hints = 'on_move'
-# Auto save
+" Auto save
 let g:auto_save = 1
+
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
