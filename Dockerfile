@@ -50,6 +50,7 @@ RUN mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   git clone https://github.com/honza/vim-snippets.git && \
   git clone https://github.com/majutsushi/tagbar && \
   git clone https://github.com/xolox/vim-easytags && \
+  git clone https://github.com/xolox/vim-misc && \
   git clone https://github.com/ekalinin/Dockerfile.vim && \
   git clone https://github.com/vim-scripts/vim-auto-save && \
 # Color schemes
